@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkVue3MicroApp"]=self["webpackChunkVue3MicroApp"]||[]).push([[443],{925:function(n,u,e){e.r(u),e.d(u,{default:function(){return f}});var r=e(252);const t={class:"about"},a=(0,r._)("h1",null,"This is an about page 来自 VUE 3",-1),c=[a];function s(n,u){return(0,r.wg)(),(0,r.iD)("div",t,c)}var i=e(744);const o={},p=(0,i.Z)(o,[["render",s]]);var f=p}}]);
+//# sourceMappingURL=about.3118b5a9.js.map

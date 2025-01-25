@@ -1,0 +1,4 @@
+FROM node:16
+WORKDIR /build
+COPY . ./
+RUN cd /build && yarn install --unsafe-perm=true

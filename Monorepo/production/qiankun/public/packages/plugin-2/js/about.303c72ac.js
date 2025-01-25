@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkplugin_2"]=self["webpackChunkplugin_2"]||[]).push([[443],{4723:function(n,u,t){t.r(u),t.d(u,{default:function(){return c}});var l=function(){var n=this;n._self._c;return n._m(0)},s=[function(){var n=this,u=n._self._c;return u("div",{staticClass:"about"},[u("h1",[n._v("这是 来自插件 - 2 的 一个 路由界面")])])}],e=t(3483),r={},i=(0,e.Z)(r,l,s,!1,null,null,null),c=i.exports}}]);
+//# sourceMappingURL=about.303c72ac.js.map

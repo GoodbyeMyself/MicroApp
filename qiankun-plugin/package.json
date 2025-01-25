@@ -1,0 +1,27 @@
+{
+    "name": "monorepo-pnpm-workspace",
+    "version": "1.0.0",
+    "description": "pnpm-workspace",
+    "pricate": true,
+    "scripts": {
+        "dev-app1": "pnpm run -C lib/app1 dev",
+        "dev-app2": "pnpm run -C lib/app2 dev"
+    },
+    "dependencies": {
+        "@common/components": "workspace:^",
+        "@common/utils": "workspace:^",
+        "core-js": "^3.8.3",
+        "element-ui": "^2.15.13",
+        "vue": "^2.6.14",
+        "vue-router": "^3.5.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~5.0.0",
+        "@vue/cli-plugin-router": "~5.0.0",
+        "@vue/cli-service": "~5.0.0",
+        "vue-template-compiler": "^2.6.14"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

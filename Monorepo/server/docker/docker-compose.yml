@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+    ci-dev:
+        container_name: ci-dev-container
+        image: ci-dev-image
+        network_mode: none
+        tty: true
+        command:
+            - /bin/bash
+        build:
+            context: ./
+        restart: always

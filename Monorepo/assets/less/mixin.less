@@ -1,0 +1,40 @@
+ /**
+  * @description: less 函数
+  * @author: M.yunlong
+  * @date: 2023-04-23 10:32:04
+ */
+.clearfix() { // overflow: hidden; *zoom: 1;
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+		visibility: hidden;
+		font-size: 0;
+		height: 0;
+	}
+}
+
+// 单号省略号
+.singleLine {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+// 多行省略
+.multiLine(@len){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+      /*限制在一个块元素显示的文本的行数*/
+    -webkit-line-clamp: @len;
+    -webkit-box-orient: vertical;
+}
+
+// 单行省略号
+.multiLine1 {
+    .multiLine(1);
+}
