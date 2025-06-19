@@ -2,7 +2,7 @@
     <div class="test-plugin">
         <div>
             <el-button type="primary" @click="openPlugin('get')">
-                加载： 插件1
+                加载： 数据治理智能助手
             </el-button>
         </div>
         <!-- 插件容器 -->
@@ -28,7 +28,7 @@ export default {
         return {
             loading: false,
             // 插件id
-            pluginId: 'plugin-1'
+            pluginId: 'GovernChat'
         };
     },
     mounted() {
@@ -80,15 +80,19 @@ export default {
                         name: this.pluginId,
                         entry,
                         props: {
-                            data : {
-                                defaultPath: '/home'
-                            },
                             // 暴漏方法给 插件
                             componentInterface: componentInterface(testTool),
                             // xxx
                             testTool: testTool,
                             // 传递请求方法
-                            request: request
+                            request: request,
+                            // 传递路由参数
+                            routeParams: {
+                                // 是否 显示左侧 导航栏
+                                hideNavbar: 'true',
+                                // 是否 显示 历史会话记录
+                                hideHistory: 'true'
+                            } 
                         }
                     },
                     {
@@ -116,13 +120,19 @@ export default {
 
 <style lang="less">
 .test-plugin {
-    width: 420px;
+    width: 100%;
     float: left;
     #sandBoxContainer {
-        width: 400px;
-        height: 500px;
+        width: 600px;
+        height: 680px;
         border: 1px solid #999;
         margin-top: 12px;
+        float: right;
+        overflow-y: auto;
+    }
+    // 确保包裹元素继承父容器高度
+    #sandBoxContainer > [id^="__qiankun_microapp_wrapper_for_"] {
+        height: 100%;
     }
 }
 </style>

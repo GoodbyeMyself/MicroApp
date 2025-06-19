@@ -7,7 +7,7 @@
         <!-- 插件-1 -->
         <SandBoxContainer></SandBoxContainer>
         <!-- 插件-2 -->
-        <PluginBoxContainer></PluginBoxContainer>
+        <!-- <PluginBoxContainer></PluginBoxContainer> -->
     </div>
 </template>
 
@@ -15,12 +15,12 @@
 // 插件 - 1
 import SandBoxContainer from './app/sandBoxContainer.vue';
 // 插件 - 2
-import PluginBoxContainer from './app/pluginBoxContainer.vue';
+// import PluginBoxContainer from './app/pluginBoxContainer.vue';
 export default {
     name: 'sandbox',
     components: {
-        SandBoxContainer,
-        PluginBoxContainer
+        SandBoxContainer
+        // PluginBoxContainer
     },
     data() {
         // 这里存放数据
