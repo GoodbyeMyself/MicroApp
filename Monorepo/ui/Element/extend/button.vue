@@ -46,7 +46,6 @@ export default {
          * @date: 2023-04-23 14:08:36
         */
         handleClick(evt) {
-            console.log(evt, '<- 按钮被点击了, 全局拦截');
             // xxx
             this.$emit('click', evt);
         }

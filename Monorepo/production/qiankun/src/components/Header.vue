@@ -40,7 +40,12 @@ export default {
     mounted() {
         // 注册一个观察者函数
         actions.onGlobalStateChange((state, data) => {
-            console.log("主应用观察者", state);
+            // 过滤掉以 Govern-Action- 开始的消息
+            if (state && state.type && state.type.startsWith('Govern-Action-')) {
+                return;
+            }
+            // --
+            console.log("主应用观察者, 接收到的消息：", state);
         });
     },
     methods: {
@@ -50,9 +55,8 @@ export default {
          * @date: 2023-04-15 10:54:03
         */
         testActions() {
-            console.log('主应用发送通知了');
             actions.setGlobalState({
-                type: 'actionTest',
+                type: 'Govern-Action-test',
                 data: {
                     test: 'xxx'
                 }

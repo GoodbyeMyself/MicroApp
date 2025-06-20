@@ -36,6 +36,19 @@ export default {
     },
     methods: {
         /**
+         * @description: 通信测试
+         * @author: M.yunlong
+         * @date: 2023-04-15 10:54:03
+        */
+        testActions() {
+            actions.setGlobalState({
+                type: 'actionTest',
+                data: {
+                    test: Math.random(100)
+                }
+            });
+        },
+        /**
          * @description: 插件测试
          * @author: M.yunlong
          * @date: 2023-04-19 11:12:59
@@ -92,7 +105,7 @@ export default {
                                 hideNavbar: 'true',
                                 // 是否 显示 历史会话记录
                                 hideHistory: 'true'
-                            } 
+                            }
                         }
                     },
                     {
@@ -123,7 +136,7 @@ export default {
     width: 100%;
     float: left;
     #sandBoxContainer {
-        width: 600px;
+        width: 480px;
         height: 680px;
         border: 1px solid #999;
         margin-top: 12px;
