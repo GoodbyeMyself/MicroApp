@@ -21,6 +21,9 @@ const proxyList = [{
     name: process.env.VUE_APP_DATA_SERVICE_HOST,
     ip: proxyIP
 }, {
+    name: process.env.VUE_APP_GOVERN_CHAT_HOST,
+    ip: 'https://m1.apifoxmock.com/m1/6620207-6327185-default/Govern-chat'
+}, {
     // Mock 服务器 代理
     name: process.env.VUE_APP_MOCK_HOST,
     // Mock ip
