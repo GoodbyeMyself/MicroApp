@@ -20,12 +20,15 @@ let proxyObj = {};
 
 // setting
 proxyList.forEach(item => {
+    // --
+    const prefix = item.prefix ? item.prefix : item.name;
+    // --
     proxyObj[item.name] = {
         target: item.ip,
         ws: true,
         changeOrigin: true,
         pathRewrite: {
-            ['^' + item.name]: ""
+            ['^' + item.name]: prefix
         }
     };
 });
